@@ -1,11 +1,11 @@
-10 REM Create an array to store the tile data
-20 PROCsetuptile
-30 REM Load the TILE1.TILE file into the tile data array
-40 PROCloadtile("TILE1.TILE")
-50 REM Upload the tile data to the VDP as Tile 1
+10 REM UNLOCK THE TILE ENGINE FEATURE FLAG
+20 VDU 23,0,248,768;0;
+30 :
+40 PROCsetuptile
+50 PROCloadtile("TILE1.TILE")
 60 PROCmaketile(1)
-70 REM Draw Tile 1 to position 10,10 on screen
-80 PROCdrawtile(1,10,10)
+70 PROCdrawtile(1,10,10)
+80 :
 90 END
 100 :
 110 DEF PROCsetuptile
